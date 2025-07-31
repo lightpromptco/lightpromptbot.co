@@ -26,23 +26,24 @@ export default function Page() {
 
   const { update: updateSession } = useSession();
 
-  useEffect(() => {
-    if (state.status === 'failed') {
-      toast({
-        type: 'error',
-        description: 'Invalid credentials!',
-      });
-    } else if (state.status === 'invalid_data') {
-      toast({
-        type: 'error',
-        description: 'Failed validating your submission!',
-      });
-    } else if (state.status === 'success') {
-      setIsSuccessful(true);
-      updateSession();
-      router.refresh();
-    }
-  }, [state.status]);
+useEffect(() => {
+  if (state.status === 'failed') {
+    toast({
+      type: 'error',
+      description: 'Invalid credentials!',
+    });
+  } else if (state.status === 'invalid_data') {
+    toast({
+      type: 'error',
+      description: 'Failed validating your submission!',
+    });
+  } else if (state.status === 'success') {
+    setIsSuccessful(true);
+    updateSession();
+    router.refresh();
+  }
+}, [state.status, router, updateSession]);
+
 
   const handleSubmit = (formData: FormData) => {
     setEmail(formData.get('email') as string);
