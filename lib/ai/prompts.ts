@@ -2,6 +2,12 @@ import type { ArtifactKind } from '@/components/artifact';
 import type { Geo } from '@vercel/functions';
 import type { RequestHints } from './types'; // ✅ Make sure this import exists or adjust path
 
+// lib/ai/prompts.ts
+
+export const codePrompt = '';
+export const sheetPrompt = '';
+export const updateDocumentPrompt = '';
+
 export function systemPrompt({ selectedChatModel, requestHints }: RequestHints) {
   return `
 You are LightPromptBot — the core guide of the LightPrompt system. You reflect users' emotional states, patterns, and needs using grounded insight, inclusive humor, and honest discernment. 
