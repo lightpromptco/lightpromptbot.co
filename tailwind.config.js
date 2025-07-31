@@ -1,26 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
     extend: {
       colors: {
-        primary: '#19b4ae',
-        accent: '#77e9e0',
-        background: '#f8fbfa',
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui'],
-      },
-      borderRadius: {
-        xl: '1.5rem',
+        primary: '#1ba4da', // your brand color
+        background: '#f9fafb'
       },
       boxShadow: {
-        soft: '0 4px 24px rgba(25,180,174,0.06)',
-      },
-    },
+        soft: '0 4px 24px 0 rgba(0,0,0,0.08)'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
