@@ -10,7 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+HEAD
     "next": "^13.0.0",
+
+    "next": "^15.4.5",
+ 35f09c9 (Update package.json and add .gitignore)
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
